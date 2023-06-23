@@ -38,7 +38,8 @@ export default {
             lessonsStore: useLessonStore(),
             timer: null as number | null,
             player: null as any,
-            currentTime: 0
+            currentTime: 0,
+            validateTime: 0
         }
     },
 
@@ -91,6 +92,7 @@ export default {
 
         onPlayerStateChange(event: any, player: any) {
             const state = event.data;
+
             switch (state) {
                 case 1:
                     this.startTimer(player);
@@ -99,7 +101,7 @@ export default {
                 case 2:
                     this.stopTimer();
                     break;
-
+                    
                 default:
                     console.error("Unknown state, please try again later!");
                     break;
@@ -119,7 +121,16 @@ export default {
         startTimer(player: any) {
             this.timer = setInterval(() => {
                 this.currentTime = player.getCurrentTime();
+                setTimeout(() => {
+                    this.validateTime = this.currentTime;
+                }, 5000);
+
                 if (this.lessonsStore.currentLesson.video_time) {
+
+                    if (this.currentTime - this.validateTime > 2) {
+                        this.stopTimer();
+                    }
+
                     if (this.currentTime / 60 >= this.lessonsStore.currentLesson.video_time) {
                         this.stopTimer();
                         this.lessonsStore.currentLesson.isWatched = !this.lessonsStore.currentLesson.isWatched;
