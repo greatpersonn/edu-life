@@ -11,7 +11,7 @@
                 <span class="font-sans text-lg font-normal w-72">
                     Тепер можна перейти і до наступного уроку!
                 </span>
-                <el-button type="primary" class="w-1/2 p-5" @click="changeEpisode">Наступний епізод</el-button>
+                <el-button type="primary" class="w-1/2 p-5" @click="changeEpisode" plain>Наступний епізод</el-button>
             </div>
         </div>
     </el-footer>
@@ -30,14 +30,14 @@ export default {
 
     methods: {
         changeEpisode() {
-            // if (this.lessonStore.currentLesson) {
+            if (this.lessonStore.currentLesson) {
                 
-            //     console.log(this.lessonStore.currentLesson)
-            //     // if (this.lessonStore.currentLesson.id) {
-            //     //     this.lessonStore.setCurrent(this.lessonStore.lessons[])
-            //     // }
-            // }
-            // // console.log(this.lessonStore.currentLesson)
+                console.log(this.lessonStore.currentLesson)
+                // if (this.lessonStore.currentLesson.id) {
+                //     this.lessonStore.setCurrent(this.lessonStore.lessons[])
+                // }
+            }
+            // console.log(this.lessonStore.currentLesson)
         }
     },
 }

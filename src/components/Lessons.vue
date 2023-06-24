@@ -5,7 +5,7 @@
         </div>
         <div class="flex flex-col gap-3 w-full p-5">
             <div v-for="lesson, index in lessonsData" :key="lesson.id"
-                class="flex justify-center items-center w-96 h-30 p-2 bg-gray-300 bg-opacity-5 shadow-2xl hover:cursor-pointer"
+                class="flex justify-center items-center w-96 h-30 p-2 bg-gray-300 bg-opacity-5 shadow-md hover:cursor-pointer"
                 @click="setCurrentLesson(lesson, index)">
                 <span
                     :class="lessonsStore.currentLesson.id == index || lesson.isWatched ? 'text-blue-500' : 'text-gray-400'">
@@ -38,8 +38,7 @@ export default {
             lessonsStore: useLessonStore(),
             timer: null as number | null,
             player: null as any,
-            currentTime: 0,
-            validateTime: 0
+            currentTime: 0
         }
     },
 
@@ -92,7 +91,6 @@ export default {
 
         onPlayerStateChange(event: any, player: any) {
             const state = event.data;
-
             switch (state) {
                 case 1:
                     this.startTimer(player);
@@ -102,6 +100,10 @@ export default {
                     this.stopTimer();
                     break;
                     
+                case 3:
+                    player.seekTo(0);
+                    break;
+
                 default:
                     console.error("Unknown state, please try again later!");
                     break;
@@ -121,16 +123,7 @@ export default {
         startTimer(player: any) {
             this.timer = setInterval(() => {
                 this.currentTime = player.getCurrentTime();
-                setTimeout(() => {
-                    this.validateTime = this.currentTime;
-                }, 5000);
-
                 if (this.lessonsStore.currentLesson.video_time) {
-
-                    if (this.currentTime - this.validateTime > 2) {
-                        this.stopTimer();
-                    }
-
                     if (this.currentTime / 60 >= this.lessonsStore.currentLesson.video_time) {
                         this.stopTimer();
                         this.lessonsStore.currentLesson.isWatched = !this.lessonsStore.currentLesson.isWatched;

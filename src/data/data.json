@@ -4,8 +4,8 @@
         "isWatched": false,
         "title": "Vue JS 3 Tutorial for Beginners #1 - Introduction",
         "subtitle": "#1 - Introduction",
-        "video_url": "https://www.youtube.com/embed/YrxBCBibVo0",
-        "video_time": 13,
+        "video_url": "https://www.youtube.com/embed/OWK3U9yx5Js",
+        "video_time": 3,
         "description": "Hey gang, in this Vue 3 tutorial series for beginners we'll learn Vue.js (using version 3 - the latest major version) from the ground up & use it to make a couple of nice web projects - a reaction timer & the beginning of a small, simple blog. In this video, I'll give you a quick intro to Vue & the new features Vue 3 has to offer."
     },
     
@@ -14,8 +14,8 @@
         "isWatched": false,
         "title": "Vue JS 3 Tutorial for Beginners #2 - Vue.js Basics (part 1)",
         "subtitle": "#2 - Vue.js Basics (part 1)",
-        "video_url": "https://www.youtube.com/embed/F7PLPJqVotk",
-        "video_time": 30,
+        "video_url": "https://www.youtube.com/embed/Zai_sFsQy9s",
+        "video_time": 1,
         "description": "Hey gang, in this Vue 3 tutorial you'll learn how to quickly setup Vue.js in a web application (using the CDN) and use it to implement some basic functionality such as using data properties & reacting to click events."
     },
     {
@@ -23,8 +23,8 @@
         "isWatched": false,
         "title": "Vue JS 3 Tutorial for Beginners #3 - Vue.js Basics (part 2)",
         "subtitle": "#3 - Vue.js Basics (part 2)",
-        "video_url": "https://www.youtube.com/embed/CYPZBK8zUik",
-        "video_time": 34,
+        "video_url": "https://www.youtube.com/embed/DfsLvq0zayA",
+        "video_time": 2,
         "description": "In this Vue 3 tutorial we'll carry on with the basics of Vue  & talk about mouse events, using v-for to output lists, attribute binding & computed properties."
     },
     {
@@ -32,8 +32,8 @@
         "isWatched": false,
         "title": "Vue JS 3 Tutorial for Beginners #4 - The Vue CLI & Bigger Projects (part 1)",
         "subtitle": "#4 - The Vue CLI & Bigger Projects (part 1)",
-        "video_url": "https://www.youtube.com/embed/GWRvrSqnFbM",
-        "video_time": 39,
+        "video_url": "https://www.youtube.com/embed/6ZvOqUqBml0",
+        "video_time": 5,
         "description": "In this Vue 3 tutorial we'll use the Vue CLI to boilerplate a larger Vue project for us, which will ultimately contain multiple components & pages. We'll talk about vue files, templates & template refs too."
     },
     {
@@ -41,8 +41,8 @@
         "isWatched": false,
         "title": "Vue JS 3 Tutorial for Beginners #5 - The Vue CLI & Bigger Projects (part 2)",
         "subtitle": "#5 - The Vue CLI & Bigger Projects (part 2)",
-        "video_url": "https://www.youtube.com/embed/KM1U6DqZf8M",
-        "video_time": 60,
+        "video_url": "https://www.youtube.com/embed/SsKS77pZ02Y",
+        "video_time": 3,
         "description": "In this Vue 3 tutorial we'll dive deeper into making larger Vue.js projects with the Vue CLI - including how to pass data (props) between components, how to emit custom events, how to work with slots & how to use Teleport - a brand new Vue 3 feature."
     },
     {
@@ -50,8 +50,8 @@
         "isWatched": false,
         "title": "Vue JS 3 Tutorial for Beginners #6 - Build a Reaction Timer Game",
         "subtitle": "#6 - Build a Reaction Timer Game",
-        "video_url": "https://www.youtube.com/embed/bc6czIBLKTg",
-        "video_time": 42,
+        "video_url": "https://www.youtube.com/embed/nJTP6De27iI",
+        "video_time": 2,
         "description": "In this Vue 3 tutorial we'll build a reaction timer game from scratch using everything that we've learnt abut Vue.js so far - props, events, data, methods, etc. We'll also learn about lifecycle methods too."
     }
 ]
