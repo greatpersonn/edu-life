@@ -38,6 +38,7 @@ export default {
             lessonsStore: useLessonStore(),
             timer: null as number | null,
             player: null as any,
+            validateTime: 0,
             currentTime: 0
         }
     },
@@ -101,7 +102,7 @@ export default {
                     break;
                     
                 case 3:
-                    player.seekTo(0);
+                    player.seekTo(this.validateTime);
                     break;
 
                 default:
@@ -122,7 +123,12 @@ export default {
 
         startTimer(player: any) {
             this.timer = setInterval(() => {
-                this.currentTime = player.getCurrentTime();
+                
+                setTimeout(() => {
+                    this.currentTime = player.getCurrentTime();
+                    this.validateTime = player.getCurrentTime();                  
+                }, 2000);
+
                 if (this.lessonsStore.currentLesson.video_time) {
                     if (this.currentTime / 60 >= this.lessonsStore.currentLesson.video_time) {
                         this.stopTimer();
